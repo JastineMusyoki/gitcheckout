@@ -1,11 +1,25 @@
 <!-- 1. create the basic html structure. your structure should include a blue heading and a red paragragh with font size 15px -->
 
-
+<!DOCTYPE>
+<html>
+  <head>
+    <title>My work</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>WELCOME</h1>
+    <P>My name is jastine and im doing my assignment</P>
+  </body>
+</html>
 <!-- 2. in your html file, add a link that opens a new tab to an external resource  -->
 
-
+<a href="https://www.google.com">Visit Google</a>
 <!-- 3. create a section and add an image, using css; place a green border on the image, the image should be 500px wide and 500px high -->
+<section class="image-section">
+  <img src="shoes.jpg"   alt="my favorite shoes">
 
+
+</section>
 
 <!-- 4. create another section add a form that takes in the following input:
   a. name
@@ -20,5 +34,67 @@
   j. submit button with text register
   make sure to incorporate relevant labels in your form elements using the necessary and relevant input types and element attributes
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <section>
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other">
+            </fieldset><br>
+
+            <label for="subjects">Subjects:</label>
+            <select id="subjects" name="subjects" multiple>
+                <option value="English">English</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="Art and Craft">Art and Craft</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Geography">Geography</option>
+                <option value="History">History</option>
+            </select><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="hidden" id="sessionId" name="sessionId" value="123456789"><br>
+
+            <button type="button" onclick="clearForm()">Cancel</button>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script>
+        function clearForm() {
+            document.getElementById("registrationForm").reset();
+        }
+    </script>
+</body>
+</html>
+
 
 <!-- 5. all styling should be placed in the style.css, make sure to correctly embed the external css file on the index.html file using the relevant tag  -->
